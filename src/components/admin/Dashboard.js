@@ -1,5 +1,6 @@
 import React from 'react';
-import { useNavigate, Link, Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+import DailySchedule from './schedule/DailySchedule';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -51,7 +52,8 @@ const AdminDashboard = () => {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto py-6 px-4">
         <Routes>
-          <Route path="schedule" element={<div>Schedule Component</div>} />
+          <Route path="/schedule" element={<DailySchedule />} />
+          <Route path="schedule" element={<DailySchedule />} />
           <Route path="teachers" element={<div>Teachers Management</div>} />
           <Route path="students" element={<div>Students Management</div>} />
           <Route path="pricing" element={<div>Pricing Management</div>} />
